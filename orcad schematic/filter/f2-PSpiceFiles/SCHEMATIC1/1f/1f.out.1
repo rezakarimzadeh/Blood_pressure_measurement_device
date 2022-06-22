@@ -1,0 +1,516 @@
+
+**** 10/27/17 04:13:54 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\TERM6\BPAVR\ORCAD SCHEMATIC\filter\f2-PSpiceFiles\SCHEMATIC1\1f.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1f.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2.4 0 .001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source F2
+C_C6         0 N03544  100n  TC=0,0 
+R_R2         0 N03040  680k TC=0,0 
+R_R4         N03092 N03364  160k TC=0,0 
+X_U1B         N03344 N03368 VCC 0 N03368 LM324
+C_C1         N03074 N03040  1.2u  TC=0,0 
+R_R5         N03564 N03544  160k TC=0,0 
+C_C5         N03564 B  100n  TC=0,0 
+C_C3         N03364 N03368  100n  TC=0,0 
+R_R1         N03074 N03092  680k TC=0,0 
+R_R3         N03364 N03344  160k TC=0,0 
+C_C4         0 N03344  100n  TC=0,0 
+C_C2         A N03074  1.2u  TC=0,0 
+X_U1A         N03040 N03092 VCC 0 N03092 LM324
+X_U2B         N03544 B VCC 0 B LM324
+R_R6         N03368 N03564  160k TC=0,0 
+V_V1         VCC 0 5
+R_R9         N05203 N05016  2.7k TC=0,0 
+R_R7         N05199 N05044  2.7k TC=0,0 
+X_U2C         N05016 N05044 VCC 0 A LM324
+R_R10         0 N05016  560k TC=0,0 
+R_R8         N05044 A  560k TC=0,0 
+X_U2D         B N06141 VCC 0 N06166 LM324
+R_R11         0 N06141  1k TC=0,0 
+R_R12         N06166 N06141  1k TC=0,0 
+V_V2         N05203 N05199  
++PULSE 0 10m 0 .5 1n 0 .8
+
+**** RESUMING 1f.cir ****
+.END
+
+**** 10/27/17 04:13:54 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\TERM6\BPAVR\ORCAD SCHEMATIC\filter\f2-PSpiceFiles\SCHEMATIC1\1f.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.dx        X_U1B.dy        X_U1A.dx        X_U1A.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U2B.dx        X_U2B.dy        X_U2C.dx        X_U2C.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U2D.dx        X_U2D.dy        
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 10/27/17 04:13:54 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\TERM6\BPAVR\ORCAD SCHEMATIC\filter\f2-PSpiceFiles\SCHEMATIC1\1f.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.qx        X_U1A.qx        X_U2B.qx        X_U2C.qx        
+               PNP             PNP             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  166.7           166.7           166.7           166.7          
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.2             2.2             2.2          
+           D     .52             .52             .52             .52         
+
+
+               X_U2D.qx        
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 10/27/17 04:13:54 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\TERM6\BPAVR\ORCAD SCHEMATIC\filter\f2-PSpiceFiles\SCHEMATIC1\1f.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.sw2       X_U1B.sw1       X_U1B.sw3       X_U1B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U1A.sw2       X_U1A.sw1       X_U1A.sw3       X_U1A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2B.sw2       X_U2B.sw1       X_U2B.sw3       X_U2B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2C.sw2       X_U2C.sw1       X_U2C.sw3       X_U2C.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2D.sw2       X_U2D.sw1       X_U2D.sw3       X_U2D.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 10/27/17 04:13:54 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\TERM6\BPAVR\ORCAD SCHEMATIC\filter\f2-PSpiceFiles\SCHEMATIC1\1f.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)     .1366  (    B)     .0695  (  VCC)    5.0000  (N03040)     .0323     
+
+(N03074)     .0361 (N03092)     .0361 (N03344)     .0510 (N03364)     .0435     
+
+(N03368)     .0532 (N03544)     .0680 (N03564)     .0606 (N05016)     .0934     
+
+(N05044)     .0940 (N05199)     .0937 (N05203)     .0937 (N06141)     .0701     
+
+(N06166)     .1402 (X_U1A.6)     .0599                   (X_U1A.7)    -.5929    
+
+(X_U1A.8)    -.5929                   (X_U1A.9)    0.0000                       
+
+(X_U1A.a)     .0126                   (X_U1A.b)     .0126                       
+
+(X_U1B.6)     .0311                   (X_U1B.7)    -.2709                       
+
+(X_U1B.8)    -.2709                   (X_U1B.9)    0.0000                       
+
+(X_U1B.a)     .0065                   (X_U1B.b)     .0065                       
+
+(X_U2B.6)     .0168                   (X_U2B.7)    -.1035                       
+
+(X_U2B.8)    -.1035                   (X_U2B.9)    0.0000                       
+
+(X_U2B.a)     .0035                   (X_U2B.b)     .0035                       
+
+(X_U2C.6)     .0017                   (X_U2C.7)     .1236                       
+
+(X_U2C.8)     .1236                   (X_U2C.9)    0.0000                       
+
+(X_U2C.a) 259.0E-06                   (X_U2C.b) 258.5E-06                       
+
+(X_U2D.6)     .0015                   (X_U2D.7)     .1325                       
+
+(X_U2D.8)     .1325                   (X_U2D.9)    0.0000                       
+
+(X_U2D.a) 154.9E-06                   (X_U2D.b) 154.4E-06                       
+
+(X_U1A.10)     .6423                  (X_U1A.11)     .0383                      
+
+(X_U1A.12)     .0420                  (X_U1A.13)     .6289                      
+
+(X_U1A.14)     .6276                  (X_U1A.53)    3.5000                      
+
+(X_U1A.54)     .8220                  (X_U1A.90)  -12.5800                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    2.5000                  (X_U1B.10)     .6603                      
+
+(X_U1B.11)     .0390                  (X_U1B.12)     .0413                      
+
+(X_U1B.13)     .6466                  (X_U1B.14)     .6458                      
+
+(X_U1B.53)    3.5000                  (X_U1B.54)     .8220                      
+
+(X_U1B.90)   -6.4829                  (X_U1B.91)   40.0000                      
+
+(X_U1B.92)  -40.0000                  (X_U1B.99)    2.5000                      
+
+(X_U2B.10)     .6769                  (X_U2B.11)     .0394                      
+
+(X_U2B.12)     .0409                  (X_U2B.13)     .6631                      
+
+(X_U2B.14)     .6626                  (X_U2B.53)    3.5000                      
+
+(X_U2B.54)     .8220                  (X_U2B.90)   -3.4586                      
+
+(X_U2B.91)   40.0000                  (X_U2B.92)  -40.0000                      
+
+(X_U2B.99)    2.5000                  (X_U2C.10)     .7019                      
+
+(X_U2C.11)     .0398                  (X_U2C.12)     .0405                      
+
+(X_U2C.13)     .6879                  (X_U2C.14)     .6877                      
+
+(X_U2C.53)    3.5000                  (X_U2C.54)     .8220                      
+
+(X_U2C.90)    -.2585                  (X_U2C.91)   40.0000                      
+
+(X_U2C.92)  -40.0000                  (X_U2C.99)    2.5000                      
+
+(X_U2D.10)     .6780                  (X_U2D.11)     .0398                      
+
+(X_U2D.12)     .0405                  (X_U2D.13)     .6640                      
+
+(X_U2D.14)     .6638                  (X_U2D.53)    3.5000                      
+
+(X_U2D.54)     .8220                  (X_U2D.90)    -.1544                      
+
+(X_U2D.91)   40.0000                  (X_U2D.92)  -40.0000                      
+
+(X_U2D.99)    2.5000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.831E-03
+    V_V2        -1.210E-07
+    X_U1B.vb     3.110E-07
+    X_U1B.vc     3.448E-12
+    X_U1B.ve    -6.483E-03
+    X_U1B.vlim  -6.483E-03
+    X_U1B.vlp   -4.648E-11
+    X_U1B.vln   -3.352E-11
+    X_U1A.vb     5.993E-07
+    X_U1A.vc     3.465E-12
+    X_U1A.ve    -1.258E-02
+    X_U1A.vlim  -1.258E-02
+    X_U1A.vlp   -5.258E-11
+    X_U1A.vln   -2.742E-11
+    X_U2B.vb     1.681E-07
+    X_U2B.vc     3.431E-12
+    X_U2B.ve    -3.459E-03
+    X_U2B.vlim  -3.459E-03
+    X_U2B.vlp   -4.346E-11
+    X_U2B.vln   -3.655E-11
+    X_U2C.vb     1.668E-08
+    X_U2C.vc     3.364E-12
+    X_U2C.ve    -2.586E-04
+    X_U2C.vlim  -2.585E-04
+    X_U2C.vlp   -4.026E-11
+    X_U2C.vln   -3.975E-11
+    X_U2D.vb     1.505E-08
+    X_U2D.vc     3.361E-12
+    X_U2D.ve    -2.245E-04
+    X_U2D.vlim  -1.544E-04
+    X_U2D.vlp   -4.016E-11
+    X_U2D.vln   -3.985E-11
+
+    TOTAL POWER DISSIPATION   3.31E-02  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  .5  .
+         Time step =  92.69E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U1B.6)                =   125.73uV  \   264.27uV
+    V(X_U1B.90)               =   -3.542mV  \    72.93uV
+    V(X_U1B.a)                =   -165.09V  \     5.000V
+    V(X_U1B.b)                =    5.578mV  \   -72.93nV
+    V(X_U1A.90)               =  -657.61uV  \  -659.72uV
+    V(X_U1A.a)                =    3.190mV  \    2.926mV
+    V(X_U1A.b)                =    52.14uV  \    50.02uV
+    V(X_U2B.6)                =   201.93uV  \   267.96uV
+    V(X_U2B.90)               =   -1.405mV  \   -83.51uV
+    V(X_U2B.b)                =    2.547uV  \   114.82nV
+    V(X_U2C.6)                =    3.301mV  \    71.85uV
+    V(X_U2C.7)                =     2.122V  \     2.119V
+    V(X_U2C.90)               =    68.62mV  \    4.030mV
+    V(X_U2C.b)                =   -68.62uV  \   -4.030uV
+    V(X_U2C.8)                =     2.122V  \     2.119V
+
+  These supply currents failed to converge:
+
+    I(X_U1B.egnd)             =    3.482uA  \  -132.89nA
+    I(X_U1A.egnd)             =   597.24nA  \   600.70nA
+    I(X_U2B.egnd)             =    1.344uA  \    22.06nA
+    I(X_U2C.egnd)             =   -68.72uA  \   -4.091uA
+    I(V_V1)                   =  -116.55mA  \   -3.951mA
+    I(X_U1B.vb)               =    1.257nA  \    2.643nA
+    I(X_U1B.vc)               =    42.18mA  \   -2.574pA
+    I(X_U1B.ve)               =    42.21mA  \    7.653pA
+    I(X_U1B.vlim)             =   -3.542uA  \    72.93nA
+    I(X_U1A.vc)               =   -2.014nA  \    81.59pA
+    I(X_U1A.ve)               =    2.076nA  \  -127.65pA
+    I(X_U1A.vlim)             =  -657.61nA  \  -659.72nA
+    I(X_U2B.vb)               =    2.019nA  \    2.680nA
+    I(X_U2B.vc)               =   -7.008uA  \   -2.549pA
+    I(X_U2B.ve)               =    7.009uA  \    11.06pA
+    I(X_U2B.vlim)             =   -1.405uA  \   -83.51nA
+    I(X_U2C.vb)               =    33.01nA  \   718.50pA
+    I(X_U2C.vc)               =   342.67uA  \    76.08pA
+    I(X_U2C.ve)               =  -342.67uA  \   -74.55pA
+    I(X_U2C.vlim)             =    68.62uA  \    4.030uA
+    I(X_U2D.vb)               =   501.35pA  \   491.31pA
+    I(X_U2D.vc)               =    11.25mA  \   -13.01pA
+    I(X_U2D.ve)               =    11.25mA  \    16.74pA
+
+  These devices failed to converge:
+    X_U1B.dc  X_U1A.dc  X_U1A.de  X_U2D.dc  X_U2C.fb  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)    2.1185  (    B)    1.0785  (  VCC)    5.0000  (N03040)    1.1041     
+
+(N03074)    1.5161 (N03092)    1.1044 (N03344)    1.0978 (N03364)    1.1059     
+
+(N03368)    1.0981 (N03544)    1.0782 (N03564)    1.0887 (N05016)    1.0844     
+
+(N05044)    1.0847 (N05199)    1.0796 (N05203)    1.0895 (N06141)    1.0787     
+
+(N06166)    2.1574 (X_U1A.6) 263.1E-06                   (X_U1A.7)    1.1044    
+
+(X_U1A.8)    1.1044                   (X_U1A.9)    0.0000                       
+
+(X_U1A.a)     .0032                   (X_U1A.b) 52.14E-06                       
+
+(X_U1B.6) 125.7E-06                   (X_U1B.7)    1.0979                       
+
+(X_U1B.8)    1.0979                   (X_U1B.9)    0.0000                       
+
+(X_U1B.a) -165.0900                   (X_U1B.b)     .0056                       
+
+(X_U2B.6) 201.9E-06                   (X_U2B.7)    1.0784                       
+
+(X_U2B.8)    1.0784                   (X_U2B.9)    0.0000                       
+
+(X_U2B.a)    5.0000                   (X_U2B.b) 2.547E-06                       
+
+(X_U2C.6)     .0033                   (X_U2C.7)    2.1220                       
+
+(X_U2C.8)    2.1220                   (X_U2C.9)    0.0000                       
+
+(X_U2C.a)    4.9999                   (X_U2C.b)-68.61E-06                       
+
+(X_U2D.6) 50.14E-06                   (X_U2D.7)    2.2113                       
+
+(X_U2D.8)    2.2113                   (X_U2D.9)    0.0000                       
+
+(X_U2D.a)    4.9989                   (X_U2D.b)    -.0011                       
+
+(X_U1A.10)    1.7122                  (X_U1A.11)     .0398                      
+
+(X_U1A.12)     .0401                  (X_U1A.13)    1.6983                      
+
+(X_U1A.14)    1.6982                  (X_U1A.53)    3.5000                      
+
+(X_U1A.54)     .8220                  (X_U1A.90)-657.6E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    2.5000                  (X_U1B.10)    1.7059                      
+
+(X_U1B.11)     .0398                  (X_U1B.12)     .0401                      
+
+(X_U1B.13)    1.6920                  (X_U1B.14)    1.6919                      
+
+(X_U1B.53)    3.5000                  (X_U1B.54)     .8220                      
+
+(X_U1B.90)    -.0035                  (X_U1B.91)   40.0000                      
+
+(X_U1B.92)  -40.0000                  (X_U1B.99)    2.5000                      
+
+(X_U2B.10)    1.6863                  (X_U2B.11)     .0398                      
+
+(X_U2B.12)     .0401                  (X_U2B.13)    1.6723                      
+
+(X_U2B.14)    1.6723                  (X_U2B.53)    3.5000                      
+
+(X_U2B.54)     .8220                  (X_U2B.90)    -.0014                      
+
+(X_U2B.91)   40.0000                  (X_U2B.92)  -40.0000                      
+
+(X_U2B.99)    2.5000                  (X_U2C.10)    1.6925                      
+
+(X_U2C.11)     .0398                  (X_U2C.12)     .0401                      
+
+(X_U2C.13)    1.6786                  (X_U2C.14)    1.6785                      
+
+(X_U2C.53)    3.5000                  (X_U2C.54)     .8220                      
+
+(X_U2C.90)     .0686                  (X_U2C.91)   40.0000                      
+
+(X_U2C.92)  -40.0000                  (X_U2C.99)    2.5000                      
+
+(X_U2D.10)    1.6865                  (X_U2D.11)     .0398                      
+
+(X_U2D.12)     .0401                  (X_U2D.13)    1.6726                      
+
+(X_U2D.14)    1.6725                  (X_U2D.53)    3.5000                      
+
+(X_U2D.54)     .8220                  (X_U2D.90)    1.0785                      
+
+(X_U2D.91)   40.0000                  (X_U2D.92)  -40.0000                      
+
+(X_U2D.99)    2.5000                  
+
+
+**** Interrupt ****

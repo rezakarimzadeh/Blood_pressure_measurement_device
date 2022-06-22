@@ -1,0 +1,44 @@
+Removed Pin From Net: NetName=NetR3_1 Pin=R4-1
+Removed Pin From Net: NetName=NetC4_1 Pin=R6-1
+Removed Pin From Net: NetName=NetR3_1 Pin=U1-1
+Removed Pin From Net: NetName=NetC4_1 Pin=U1-7
+Removed Pin From Net: NetName=NetU1_8 Pin=U1-9
+Removed Member From Class: ClassName=Sheet2 Member=S?
+Added Component: Designator=P2(HDR1X2)
+Added Component: Designator=P3(HDR1X2)
+Added Component: Designator=Q1(TO-92A)
+Added Component: Designator=Q2(TO-92A)
+Added Component: Designator=R13(AXIAL-0.3)
+Added Component: Designator=R14(AXIAL-0.3)
+Added Pin To Net: NetName=V5V Pin=P2-1
+Added Pin To Net: NetName=V5V Pin=P3-1
+Added Pin To Net: NetName=GND Pin=Q1-3
+Added Pin To Net: NetName=GND Pin=Q2-3
+Added Pin To Net: NetName=GND Pin=R13-1
+Added Pin To Net: NetName=GND Pin=R14-1
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_1 Pin=U1-1
+Added Net: Name=NetR4_1
+Added Pin To Net: NetName=NetR6_1 Pin=R6-1
+Added Pin To Net: NetName=NetR6_1 Pin=U1-7
+Added Net: Name=NetR6_1
+Added Pin To Net: NetName=P6D Pin=Q1-2
+Added Pin To Net: NetName=P6D Pin=R13-2
+Added Pin To Net: NetName=P6D Pin=U?-12
+Added Net: Name=P6D
+Added Pin To Net: NetName=P7D Pin=Q2-2
+Added Pin To Net: NetName=P7D Pin=R14-2
+Added Pin To Net: NetName=P7D Pin=U?-13
+Added Net: Name=P7D
+Added Pin To Net: NetName=PUMP Pin=P2-2
+Added Pin To Net: NetName=PUMP Pin=Q1-1
+Added Net: Name=PUMP
+Added Pin To Net: NetName=VALVE Pin=P3-2
+Added Pin To Net: NetName=VALVE Pin=Q2-1
+Added Net: Name=VALVE
+Added Member To Class: ClassName=Sheet2 Member=Component P2 Header 2
+Added Member To Class: ClassName=Sheet2 Member=Component P3 Header 2
+Added Member To Class: ClassName=Sheet2 Member=Component Q1 2N3904
+Added Member To Class: ClassName=Sheet2 Member=Component Q2 2N3904
+Added Member To Class: ClassName=Sheet2 Member=Component R13 Res1
+Added Member To Class: ClassName=Sheet2 Member=Component R14 Res1

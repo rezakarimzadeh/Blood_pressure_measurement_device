@@ -1,0 +1,373 @@
+
+**** 11/06/17 11:26:24 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\term6\bpavr\orcad schematic\filter\f2-pspicefiles\schematic1\1f.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1f.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10000 .0001 60
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source F2
+C_C6         0 N03544  100n  TC=0,0 
+R_R2         0 N03040  330k TC=0,0 
+R_R4         N03092 N03364  150k TC=0,0 
+X_U1B         N03344 N03368 VCC 0 N03368 LM324
+C_C1         N03074 N03040  2.2u  TC=0,0 
+R_R5         N03564 N03544  150k TC=0,0 
+C_C5         N03564 B  100n  TC=0,0 
+C_C3         N03364 N03368  100n  TC=0,0 
+R_R1         N03074 N03092  330k TC=0,0 
+R_R3         N03364 N03344  150k TC=0,0 
+C_C4         0 N03344  100n  TC=0,0 
+C_C2         A N03074  2.2u  TC=0,0 
+X_U1A         N03040 N03092 VCC 0 N03092 LM324
+X_U2B         N03544 B VCC 0 B LM324
+R_R6         N03368 N03564  150k TC=0,0 
+V_V1         VCC 0 5
+R_R9         N05203 N05016  2.7k TC=0,0 
+R_R7         N05199 N05044  2.7k TC=0,0 
+X_U2C         N05016 N05044 VCC 0 A LM324
+R_R10         0 N05016  560k TC=0,0 
+R_R8         N05044 A  560k TC=0,0 
+X_U2D         B N06141 VCC 0 N06166 LM324
+R_R11         0 N06141  1k TC=0,0 
+R_R12         N06166 N06141  1k TC=0,0 
+V_V2         N05203 N05199  AC 1m
++SIN 0 10m 1.2 0 0 0
+
+**** RESUMING 1f.cir ****
+.END
+
+**** 11/06/17 11:26:24 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\term6\bpavr\orcad schematic\filter\f2-pspicefiles\schematic1\1f.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.dx        X_U1B.dy        X_U1A.dx        X_U1A.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U2B.dx        X_U2B.dy        X_U2C.dx        X_U2C.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U2D.dx        X_U2D.dy        
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 11/06/17 11:26:24 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\term6\bpavr\orcad schematic\filter\f2-pspicefiles\schematic1\1f.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.qx        X_U1A.qx        X_U2B.qx        X_U2C.qx        
+               PNP             PNP             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  166.7           166.7           166.7           166.7          
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.2             2.2             2.2          
+           D     .52             .52             .52             .52         
+
+
+               X_U2D.qx        
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 11/06/17 11:26:24 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\term6\bpavr\orcad schematic\filter\f2-pspicefiles\schematic1\1f.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.sw2       X_U1B.sw1       X_U1B.sw3       X_U1B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U1A.sw2       X_U1A.sw1       X_U1A.sw3       X_U1A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2B.sw2       X_U2B.sw1       X_U2B.sw3       X_U2B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2C.sw2       X_U2C.sw1       X_U2C.sw3       X_U2C.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2D.sw2       X_U2D.sw1       X_U2D.sw3       X_U2D.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 11/06/17 11:26:24 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\term6\bpavr\orcad schematic\filter\f2-pspicefiles\schematic1\1f.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)     .1366  (    B)     .0557  (  VCC)    5.0000  (N03040)     .0161     
+
+(N03074)     .0221 (N03092)     .0221 (N03344)     .0363 (N03364)     .0292     
+
+(N03368)     .0396 (N03544)     .0536 (N03564)     .0466 (N05016)     .0934     
+
+(N05044)     .0940 (N05199)     .0937 (N05203)     .0937 (N06141)     .0564     
+
+(N06166)     .1129 (X_U1A.6)     .1025                   (X_U1A.7)   -1.0567    
+
+(X_U1A.8)   -1.0567                   (X_U1A.9)    0.0000                       
+
+(X_U1A.a)     .0216                   (X_U1A.b)     .0216                       
+
+(X_U1B.6)     .0523                   (X_U1B.7)    -.5083                       
+
+(X_U1B.8)    -.5083                   (X_U1B.9)    0.0000                       
+
+(X_U1B.a)     .0110                   (X_U1B.b)     .0110                       
+
+(X_U2B.6)     .0283                   (X_U2B.7)    -.2390                       
+
+(X_U2B.8)    -.2390                   (X_U2B.9)    0.0000                       
+
+(X_U2B.a)     .0059                   (X_U2B.b)     .0059                       
+
+(X_U2C.6)     .0017                   (X_U2C.7)     .1236                       
+
+(X_U2C.8)     .1236                   (X_U2C.9)    0.0000                       
+
+(X_U2C.a) 259.0E-06                   (X_U2C.b) 258.5E-06                       
+
+(X_U2D.6)     .0035                   (X_U2D.7)     .0833                       
+
+(X_U2D.8)     .0833                   (X_U2D.9)    0.0000                       
+
+(X_U2D.a) 590.7E-06                   (X_U2D.b) 590.2E-06                       
+
+(X_U1A.10)     .6272                  (X_U1A.11)     .0371                      
+
+(X_U1A.12)     .0432                  (X_U1A.13)     .6142                      
+
+(X_U1A.14)     .6121                  (X_U1A.53)    3.5000                      
+
+(X_U1A.54)     .8220                  (X_U1A.90)  -21.5760                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    2.5000                  (X_U1B.10)     .6461                      
+
+(X_U1B.11)     .0385                  (X_U1B.12)     .0418                      
+
+(X_U1B.13)     .6327                  (X_U1B.14)     .6315                      
+
+(X_U1B.53)    3.5000                  (X_U1B.54)     .8220                      
+
+(X_U1B.90)  -10.9590                  (X_U1B.91)   40.0000                      
+
+(X_U1B.92)  -40.0000                  (X_U1B.99)    2.5000                      
+
+(X_U2B.10)     .6628                  (X_U2B.11)     .0391                      
+
+(X_U2B.12)     .0412                  (X_U2B.13)     .6491                      
+
+(X_U2B.14)     .6484                  (X_U2B.53)    3.5000                      
+
+(X_U2B.54)     .8220                  (X_U2B.90)   -5.8942                      
+
+(X_U2B.91)   40.0000                  (X_U2B.92)  -40.0000                      
+
+(X_U2B.99)    2.5000                  (X_U2C.10)     .7019                      
+
+(X_U2C.11)     .0398                  (X_U2C.12)     .0405                      
+
+(X_U2C.13)     .6879                  (X_U2C.14)     .6877                      
+
+(X_U2C.53)    3.5000                  (X_U2C.54)     .8220                      
+
+(X_U2C.90)    -.2585                  (X_U2C.91)   40.0000                      
+
+(X_U2C.92)  -40.0000                  (X_U2C.99)    2.5000                      
+
+(X_U2D.10)     .6642                  (X_U2D.11)     .0398                      
+
+(X_U2D.12)     .0405                  (X_U2D.13)     .6503                      
+
+(X_U2D.14)     .6500                  (X_U2D.53)    3.5000                      
+
+(X_U2D.54)     .8220                  (X_U2D.90)    -.5902                      
+
+(X_U2D.91)   40.0000                  (X_U2D.92)  -40.0000                      
+
+(X_U2D.99)    2.5000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.831E-03
+    V_V2        -1.210E-07
+    X_U1B.vb     5.227E-07
+    X_U1B.vc     3.461E-12
+    X_U1B.ve    -1.096E-02
+    X_U1B.vlim  -1.096E-02
+    X_U1B.vlp   -5.096E-11
+    X_U1B.vln   -2.904E-11
+    X_U1A.vb     1.025E-06
+    X_U1A.vc     3.479E-12
+    X_U1A.ve    -2.158E-02
+    X_U1A.vlim  -2.158E-02
+    X_U1A.vlp   -6.158E-11
+    X_U1A.vln   -1.843E-11
+    X_U2B.vb     2.832E-07
+    X_U2B.vc     3.445E-12
+    X_U2B.ve    -5.894E-03
+    X_U2B.vlim  -5.894E-03
+    X_U2B.vlp   -4.590E-11
+    X_U2B.vln   -3.411E-11
+    X_U2C.vb     1.668E-08
+    X_U2C.vc     3.364E-12
+    X_U2C.ve    -2.586E-04
+    X_U2C.vlim  -2.585E-04
+    X_U2C.vlp   -4.026E-11
+    X_U2C.vln   -3.975E-11
+    X_U2D.vb     3.505E-08
+    X_U2D.vc     3.388E-12
+    X_U2D.ve    -6.466E-04
+    X_U2D.vlim  -5.902E-04
+    X_U2D.vlp   -4.059E-11
+    X_U2D.vln   -3.941E-11
+
+    TOTAL POWER DISSIPATION   4.65E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/06/17 11:26:24 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1f"  [ D:\term6\bpavr\orcad schematic\filter\f2-pspicefiles\schematic1\1f.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        3.19
+

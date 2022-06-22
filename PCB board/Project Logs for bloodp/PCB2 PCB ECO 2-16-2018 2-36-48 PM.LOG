@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=2INT Pin=C7-1
+Removed Pin From Net: NetName=3INT Pin=C7-2
+Removed Pin From Net: NetName=INT Pin=C8-1
+Removed Pin From Net: NetName=1INT Pin=C8-2
+Change Component Comment : Designator=C7 Old Comment=2.2u New Comment=100n
+Change Component Comment : Designator=C8 Old Comment=2.2u New Comment=100n
+Added Pin To Net: NetName=GND Pin=C7-1
+Added Pin To Net: NetName=2INT Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=INT Pin=C8-2
+Added Room: Name=Sheet2

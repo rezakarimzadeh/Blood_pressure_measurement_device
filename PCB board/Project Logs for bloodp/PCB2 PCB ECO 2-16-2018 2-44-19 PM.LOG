@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=J1 Old Footprint=691214100002 New Footprint=KF300-2 PIN
+Change Component Comment : Designator=J1 Old Comment=691214100002 New Comment=TBlock-2
+Added Room: Name=Sheet2

@@ -1,0 +1,64 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+lcd                                                                               0x01C8      20
+str                                                                               0x01DC      20
+pick                                                                              0x01F0      60
+press_vec                                                                         0x022C      60
+old                                                                               0x0268       2
+new                                                                               0x026A       2
+systole                                                                           0x026C       2
+max_pick                                                                          0x026E       2
+maximum                                                                           0x0270       2
+diastole                                                                          0x0272       2
+time                                                                              0x0274       2
+thr                                                                               0x0276       4
+time_vec                                                                          0x027A     240
+tsum                                                                              0x036A       4
+_seed                                                                             0x036E       4
+_base_y                                                                           0x0372       4
+_lcd_y                                                                            0x0376       1
+_lcd_maxx                                                                         0x0377       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+n                                                                                 R5           1
+hr                                                                                R4           1
+up                                                                                R7           1
+count                                                                             R6           1
+i                                                                                 R9           1
+max_index                                                                         R8           1
+start                                                                             R11          1
+presure                                                                           R12,R13      2
+_lcd_x                                                                            R10          1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+tabdil                                                                            0x000C2     23
+read_adc                                                                          0x000D9     14
+ext_int1_isr                                                                      0x000E7     43
+timer0_ovf_isr                                                                    0x00112     15
+ext_int0_isr                                                                      0x00121     27
+main                                                                              0x0013C    424
+put_buff_G100                                                                     0x002E4     45
+_print_G100                                                                       0x00311    276
+sprintf                                                                           0x00425     41
+ftoa                                                                              0x0044E    144
+_lcd_write_nibble_G102                                                            0x004DE     14
+_lcd_write_data                                                                   0x004EC     12
+lcd_gotoxy                                                                        0x004F8     15
+lcd_clear                                                                         0x00507     15
+lcd_putchar                                                                       0x00516     25
+lcd_puts                                                                          0x0052F     16
+lcd_init                                                                          0x0053F     42
+strcpyf                                                                           0x00569     12
+strlen                                                                            0x00575     11
+strlenf                                                                           0x00580     12
+ftrunc                                                                            0x0058C     48
+floor                                                                             0x005BC     16
